@@ -20,14 +20,46 @@ let convert = function () {
 
 
 
-    // Calculate for meter conversion
-    if (fromUnit == "Meter") {
+    // CHECK FOR THE RIGHT CONVERSION TO BE DONE 
+    if (fromUnit == "Meter") { //Meter conversion
 
         result = parseFloat(meter_to_(fromValue))
 
     } else if (fromUnit == "Kilometer") { //Kilometer conversion
 
         result = parseFloat(kilometer_to_(fromValue))
+
+    } else if (fromUnit == "Mile") { //Mile conversion
+
+        result = parseFloat(mile_to_(fromValue))
+
+    } else if (fromUnit == "Inch") { //Inch conversion
+
+        result = parseFloat(inch_to_(fromValue))
+
+    } else if (fromUnit == "Foot") { //Foot conversion
+
+        result = parseFloat(foot_to_(fromValue))
+
+    } else if (fromUnit == "Yard") { //Yard conversion
+
+        result = parseFloat(yard_to_(fromValue))
+
+    } else if (fromUnit == "Rod") { //Rod conversion
+
+        result = parseFloat(rod_to_(fromValue))
+
+    } else if (fromUnit == "Chain") { //Chain conversion
+
+        result = parseFloat(chain_to_(fromValue))
+
+    } else if (fromUnit == "Furlong") { //Furlong conversion
+
+        result = parseFloat(furlong_to_(fromValue))
+
+    } else if (fromUnit == "Nautical Mile") { //Nautical mile conversion
+
+        result = parseFloat(nauticalMile_to_(fromValue))
 
     }
 
@@ -39,7 +71,7 @@ let convert = function () {
 }
 
 
-// CONVERSION CALCULATION
+// CONVERSION CALCULATIONS
 // Calculation for meter conversions
 let meter_to_ = function (m) {
     let toSelect = document.getElementById("toSelect")
@@ -187,337 +219,337 @@ let mile_to_ = function (mi) {
     return result
 }
 // Calculation for inch conversions
-let inch_to_ = function () {
+let inch_to_ = function (inch) {
     let toSelect = document.getElementById("toSelect")
     let toUnit = toSelect.options[toSelect.selectedIndex].text;
 
     if (toUnit == "Meter") { //Meter
 
-        result = m
+        result = inch / 39.370079
 
     } else if (toUnit == "Kilometer") { //Kilometer
 
-        result = m / 1000
+        result = inch / 1000
 
     } else if (toUnit == "Mile") { //Mile
 
-        result = m * 0.000621
+        result = inch * 0.000621
 
     } else if (toUnit == "Inch") { //Inch
 
-        result = m * 39.370079
+        result = inch
 
     } else if (toUnit == "Foot") { //Foot
 
-        result = m * 3.28084
+        result = inch * 3.28084
 
     } else if (toUnit == "Yard") { //Yard
 
-        result = m * 1.093613
+        result = inch * 1.093613
 
     } else if (toUnit == "Rod") { //Rod
 
-        result = m * 0.1988387815
+        result = inch * 0.1988387815
 
     } else if (toUnit == "Chain") { //Chain
 
-        result = m * 0.0497096954
+        result = inch * 0.0497096954
 
     } else if (toUnit == "Furlong") { //Furlong
 
-        result = m * 0.0049709695
+        result = inch * 0.0049709695
 
     } else if (toUnit == "Nautical Mile") { //Nautical Mile
 
-        result = m * 0.0005399568
+        result = inch * 0.0005399568
     }
 
     return result
 }
 // Calculation for foot conversions
-let foot_to_ = function () {
+let foot_to_ = function (ft) {
     let toSelect = document.getElementById("toSelect")
     let toUnit = toSelect.options[toSelect.selectedIndex].text;
 
     if (toUnit == "Meter") { //Meter
 
-        result = m
+        result = ft / 3.28084
 
     } else if (toUnit == "Kilometer") { //Kilometer
 
-        result = m / 1000
+        result = ft / 1000
 
     } else if (toUnit == "Mile") { //Mile
 
-        result = m * 0.000621
+        result = ft * 0.000621
 
     } else if (toUnit == "Inch") { //Inch
 
-        result = m * 39.370079
+        result = ft * 39.370079
 
     } else if (toUnit == "Foot") { //Foot
 
-        result = m * 3.28084
+        result = ft
 
     } else if (toUnit == "Yard") { //Yard
 
-        result = m * 1.093613
+        result = ft * 1.093613
 
     } else if (toUnit == "Rod") { //Rod
 
-        result = m * 0.1988387815
+        result = ft * 0.1988387815
 
     } else if (toUnit == "Chain") { //Chain
 
-        result = m * 0.0497096954
+        result = ft * 0.0497096954
 
     } else if (toUnit == "Furlong") { //Furlong
 
-        result = m * 0.0049709695
+        result = ft * 0.0049709695
 
     } else if (toUnit == "Nautical Mile") { //Nautical Mile
 
-        result = m * 0.0005399568
+        result = ft * 0.0005399568
     }
 
     return result
 }
 // Calculation for yard conversions
-let yard_to_ = function () {
+let yard_to_ = function (yd) {
     let toSelect = document.getElementById("toSelect")
     let toUnit = toSelect.options[toSelect.selectedIndex].text;
 
     if (toUnit == "Meter") { //Meter
 
-        result = m
+        result = yd / 1.093613
 
     } else if (toUnit == "Kilometer") { //Kilometer
 
-        result = m / 1000
+        result = yd / 1000
 
     } else if (toUnit == "Mile") { //Mile
 
-        result = m * 0.000621
+        result = yd * 0.000621
 
     } else if (toUnit == "Inch") { //Inch
 
-        result = m * 39.370079
+        result = yd * 39.370079
 
     } else if (toUnit == "Foot") { //Foot
 
-        result = m * 3.28084
+        result = yd * 3.28084
 
     } else if (toUnit == "Yard") { //Yard
 
-        result = m * 1.093613
+        result = yd
 
     } else if (toUnit == "Rod") { //Rod
 
-        result = m * 0.1988387815
+        result = yd * 0.1988387815
 
     } else if (toUnit == "Chain") { //Chain
 
-        result = m * 0.0497096954
+        result = yd * 0.0497096954
 
     } else if (toUnit == "Furlong") { //Furlong
 
-        result = m * 0.0049709695
+        result = yd * 0.0049709695
 
     } else if (toUnit == "Nautical Mile") { //Nautical Mile
 
-        result = m * 0.0005399568
+        result = yd * 0.0005399568
     }
 
     return result
 }
 // Calculation for rod conversions
-let rod_to_ = function () {
+let rod_to_ = function (rod) {
     let toSelect = document.getElementById("toSelect")
     let toUnit = toSelect.options[toSelect.selectedIndex].text;
 
     if (toUnit == "Meter") { //Meter
 
-        result = m
+        result = rod / 0.1988387815
 
     } else if (toUnit == "Kilometer") { //Kilometer
 
-        result = m / 1000
+        result = rod / 1000
 
     } else if (toUnit == "Mile") { //Mile
 
-        result = m * 0.000621
+        result = rod * 0.000621
 
     } else if (toUnit == "Inch") { //Inch
 
-        result = m * 39.370079
+        result = rod * 39.370079
 
     } else if (toUnit == "Foot") { //Foot
 
-        result = m * 3.28084
+        result = rod * 3.28084
 
     } else if (toUnit == "Yard") { //Yard
 
-        result = m * 1.093613
+        result = rod * 1.093613
 
     } else if (toUnit == "Rod") { //Rod
 
-        result = m * 0.1988387815
+        result = rod
 
     } else if (toUnit == "Chain") { //Chain
 
-        result = m * 0.0497096954
+        result = rod * 0.0497096954
 
     } else if (toUnit == "Furlong") { //Furlong
 
-        result = m * 0.0049709695
+        result = rod * 0.0049709695
 
     } else if (toUnit == "Nautical Mile") { //Nautical Mile
 
-        result = m * 0.0005399568
+        result = rod * 0.0005399568
     }
 
     return result
 }
 // Calculation for chain conversions
-let chain_to_ = function () {
+let chain_to_ = function (ch) {
     let toSelect = document.getElementById("toSelect")
     let toUnit = toSelect.options[toSelect.selectedIndex].text;
 
     if (toUnit == "Meter") { //Meter
 
-        result = m
+        result = ch / 0.0497096954
 
     } else if (toUnit == "Kilometer") { //Kilometer
 
-        result = m / 1000
+        result = ch / 1000
 
     } else if (toUnit == "Mile") { //Mile
 
-        result = m * 0.000621
+        result = ch * 0.000621
 
     } else if (toUnit == "Inch") { //Inch
 
-        result = m * 39.370079
+        result = ch * 39.370079
 
     } else if (toUnit == "Foot") { //Foot
 
-        result = m * 3.28084
+        result = ch * 3.28084
 
     } else if (toUnit == "Yard") { //Yard
 
-        result = m * 1.093613
+        result = ch * 1.093613
 
     } else if (toUnit == "Rod") { //Rod
 
-        result = m * 0.1988387815
+        result = ch * 0.1988387815
 
     } else if (toUnit == "Chain") { //Chain
 
-        result = m * 0.0497096954
+        result = ch
 
     } else if (toUnit == "Furlong") { //Furlong
 
-        result = m * 0.0049709695
+        result = ch * 0.0049709695
 
     } else if (toUnit == "Nautical Mile") { //Nautical Mile
 
-        result = m * 0.0005399568
+        result = ch * 0.0005399568
     }
 
     return result
 }
 // Calculation for furlong conversions
-let furlong_to_ = function () {
+let furlong_to_ = function (fur) {
     let toSelect = document.getElementById("toSelect")
     let toUnit = toSelect.options[toSelect.selectedIndex].text;
 
     if (toUnit == "Meter") { //Meter
 
-        result = m
+        result = fur / 0.0049709695
 
     } else if (toUnit == "Kilometer") { //Kilometer
 
-        result = m / 1000
+        result = fur / 1000
 
     } else if (toUnit == "Mile") { //Mile
 
-        result = m * 0.000621
+        result = fur * 0.000621
 
     } else if (toUnit == "Inch") { //Inch
 
-        result = m * 39.370079
+        result = fur * 39.370079
 
     } else if (toUnit == "Foot") { //Foot
 
-        result = m * 3.28084
+        result = fur * 3.28084
 
     } else if (toUnit == "Yard") { //Yard
 
-        result = m * 1.093613
+        result = fur * 1.093613
 
     } else if (toUnit == "Rod") { //Rod
 
-        result = m * 0.1988387815
+        result = fur * 0.1988387815
 
     } else if (toUnit == "Chain") { //Chain
 
-        result = m * 0.0497096954
+        result = fur * 0.0497096954
 
     } else if (toUnit == "Furlong") { //Furlong
 
-        result = m * 0.0049709695
+        result = fur
 
     } else if (toUnit == "Nautical Mile") { //Nautical Mile
 
-        result = m * 0.0005399568
+        result = fur * 0.0005399568
     }
 
     return result
 }
 // Calculation for nautical mile conversions
-let nauticalMile_to_ = function () {
+let nauticalMile_to_ = function (nmi) {
     let toSelect = document.getElementById("toSelect")
     let toUnit = toSelect.options[toSelect.selectedIndex].text;
 
     if (toUnit == "Meter") { //Meter
 
-        result = m
+        result = nmi / 0.0005399568
 
     } else if (toUnit == "Kilometer") { //Kilometer
 
-        result = m / 1000
+        result = nmi / 1000
 
     } else if (toUnit == "Mile") { //Mile
 
-        result = m * 0.000621
+        result = nmi * 0.000621
 
     } else if (toUnit == "Inch") { //Inch
 
-        result = m * 39.370079
+        result = nmi * 39.370079
 
     } else if (toUnit == "Foot") { //Foot
 
-        result = m * 3.28084
+        result = nmi * 3.28084
 
     } else if (toUnit == "Yard") { //Yard
 
-        result = m * 1.093613
+        result = nmi * 1.093613
 
     } else if (toUnit == "Rod") { //Rod
 
-        result = m * 0.1988387815
+        result = nmi * 0.1988387815
 
     } else if (toUnit == "Chain") { //Chain
 
-        result = m * 0.0497096954
+        result = nmi * 0.0497096954
 
     } else if (toUnit == "Furlong") { //Furlong
 
-        result = m * 0.0049709695
+        result = nmi * 0.0049709695
 
     } else if (toUnit == "Nautical Mile") { //Nautical Mile
 
-        result = m * 0.0005399568
+        result = nmi
     }
 
     return result
