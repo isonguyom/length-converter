@@ -18,6 +18,8 @@ let convert = function () {
     // Get to value
     let toValue = document.getElementById("toValue")
 
+    let result
+
     // updateFromValue()
     // updateFromUnit()
 
@@ -27,73 +29,49 @@ let convert = function () {
 
 
     // Calculate for meter conversion
-    if (fromUnit = "Meter") {
-        
-        if (toUnit == "Meter") {
-        
-            toValue.value = fromValue
+    if (fromUnit == "Meter") {
+
+        if (toUnit == "Meter") { //Meter
+
+            result = fromValue
         }
-    
-        if (toUnit == "Kilometer") {
-            
-            toValue.value = fromValue / 1000
+
+        if (toUnit == "Kilometer") { //Kilometer
+
+            result = fromValue / 1000
         }
+    } else if (fromUnit == "Kilometer") { //Kilometer conversion
+        
+        if (toUnit == "Meter") { //Meter
+
+            result = fromValue * 1000
+        }
+
+        if (toUnit == "Kilometer") { //Kilometer
+
+            result = fromValue
+        }
+
     }
+
 
     // Calculate for Kilometer conversion
-    if (fromUnit = "Kilometer") {
-        if (toUnit == "Meter") {
-        
-            toValue.value = fromValue * 1000
-        }
-    
-        if (toUnit == "Kilometer") {
-            
-            toValue.value = fromValue
-        }
-    }
+    // if (fromUnit = "Kilometer") {
+    //     if (toUnit == "Meter") {
 
-    // Calculate for Mile conversion
-    if (fromUnit = "Mile") {
-        
-    }
-    
-    // Calculate for Inch conversion
-    if (fromUnit = "Mile") {
-        
-    }
+    //         result = fromValue * 1000
+    //     }
 
-    // Calculate for Foot conversion
-    if (fromUnit = "Mile") {
-        
-    }
+    //     if (toUnit == "Kilometer") {
 
-    // Calculate for Yard conversion
-    if (fromUnit = "Mile") {
-        
-    }
+    //         result = fromValue
+    //     }
+    // }
 
-    // Calculate for Rod conversion
-    if (fromUnit = "Mile") {
-        
-    }
 
-    // Calculate for Chain conversion
-    if (fromUnit = "Mile") {
-        
-    }
 
-    // Calculate for Furlong conversion
-    if (fromUnit = "Mile") {
-        
-    }
-
-    // Calculate for Nautical Mile conversion
-    if (fromUnit = "Mile") {
-        
-    }
-
-    console.log(toValue.value + toUnit)
+    toValue.value = result
+    console.log(result + toUnit)
 }
 
 
@@ -118,7 +96,7 @@ let convert = function () {
 // let updateFromValue = function () {
 //     let fromValue = document.getElementById("fromValue").value
 
-    
+
 //     console.log("From Value: " + fromValue)
 //     return fromValue
 // }
@@ -128,7 +106,7 @@ let convert = function () {
 
 
 
-   
+
 //     console.log("To Value: " + toValue)
 //     return toValue
 
@@ -137,14 +115,14 @@ let convert = function () {
 // let meter_to_ = function (m) {
 //     let toSelect = document.getElementById("toSelect")
 //     let toUnit = toSelect.options[toSelect.selectedIndex].text;
- 
+
 //     if (toUnit == "Meter") {
-        
+
 //         toValue = m
 //     }
 
 //     if (toUnit == "Kilometer") {
-        
+
 //         toValue = m / 1000
 //     }
 

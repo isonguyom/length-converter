@@ -13,58 +13,47 @@ var convert = function convert() {
 
   var fromValue = document.getElementById("fromValue").value; // Get to value
 
-  var toValue = document.getElementById("toValue"); // updateFromValue()
+  var toValue = document.getElementById("toValue");
+  var result; // updateFromValue()
   // updateFromUnit()
   // updateToValue()
   // updateToUnit()
   // Calculate for meter conversion
 
-  if (fromUnit = "Meter") {
+  if (fromUnit == "Meter") {
     if (toUnit == "Meter") {
-      toValue.value = fromValue;
+      //Meter
+      result = fromValue;
     }
 
     if (toUnit == "Kilometer") {
-      toValue.value = fromValue / 1000;
+      //Kilometer
+      result = fromValue / 1000;
+    }
+  } else if (fromUnit == "Kilometer") {
+    //Kilometer conversion
+    if (toUnit == "Meter") {
+      //Meter
+      result = fromValue * 1000;
+    }
+
+    if (toUnit == "Kilometer") {
+      //Kilometer
+      result = fromValue;
     }
   } // Calculate for Kilometer conversion
+  // if (fromUnit = "Kilometer") {
+  //     if (toUnit == "Meter") {
+  //         result = fromValue * 1000
+  //     }
+  //     if (toUnit == "Kilometer") {
+  //         result = fromValue
+  //     }
+  // }
 
 
-  if (fromUnit = "Kilometer") {
-    if (toUnit == "Meter") {
-      toValue.value = fromValue * 1000;
-    }
-
-    if (toUnit == "Kilometer") {
-      toValue.value = fromValue;
-    }
-  } // Calculate for Mile conversion
-
-
-  if (fromUnit = "Mile") {} // Calculate for Inch conversion
-
-
-  if (fromUnit = "Mile") {} // Calculate for Foot conversion
-
-
-  if (fromUnit = "Mile") {} // Calculate for Yard conversion
-
-
-  if (fromUnit = "Mile") {} // Calculate for Rod conversion
-
-
-  if (fromUnit = "Mile") {} // Calculate for Chain conversion
-
-
-  if (fromUnit = "Mile") {} // Calculate for Furlong conversion
-
-
-  if (fromUnit = "Mile") {} // Calculate for Nautical Mile conversion
-
-
-  if (fromUnit = "Mile") {}
-
-  console.log(toValue.value + toUnit);
+  toValue.value = result;
+  console.log(result + toUnit);
 }; // let updateFromUnit = function () {
 //     let fromSelect = document.getElementById("fromSelect")
 //     let fromUnit = fromSelect.options[fromSelect.selectedIndex].text;
