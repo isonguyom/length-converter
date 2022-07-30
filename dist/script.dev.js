@@ -2,6 +2,7 @@
 
 // Length conversion
 var result;
+var note = document.getElementById("note");
 var convertBtn = document.getElementById("convertBtn");
 
 var convert = function convert() {
@@ -48,10 +49,11 @@ var convert = function convert() {
     result = parseFloat(nauticalMile_to_(fromValue));
   }
 
+  note.innerHTML = "1" + fromUnit + " = " + result / fromValue + toUnit;
   toValue.value = result;
   console.log(result + toUnit);
 }; // CONVERSION CALCULATIONS
-// Calculation for meter conversions
+// meter conversion to other units 
 
 
 var meter_to_ = function meter_to_(m) {
@@ -91,7 +93,7 @@ var meter_to_ = function meter_to_(m) {
   }
 
   return result;
-}; // Calculation for kilometer conversions
+}; // kilometer conversions to other unit
 
 
 var kilometer_to_ = function kilometer_to_(km) {
@@ -106,28 +108,28 @@ var kilometer_to_ = function kilometer_to_(km) {
     result = km;
   } else if (toUnit == "Mile") {
     //Mile
-    result = km * 0.000621;
+    result = km * 0.62137119224;
   } else if (toUnit == "Inch") {
     //Inch
-    result = km * 39.370079;
+    result = km * 39370.1;
   } else if (toUnit == "Foot") {
     //Foot
-    result = km * 3.28084;
+    result = km * 3280.84;
   } else if (toUnit == "Yard") {
     //Yard
-    result = km * 1.093613;
+    result = km * 1093.6132983;
   } else if (toUnit == "Rod") {
     //Rod
-    result = km * 0.1988387815;
+    result = km * 198.83878152;
   } else if (toUnit == "Chain") {
     //Chain
-    result = km * 0.0497096954;
+    result = km * 49.709695379;
   } else if (toUnit == "Furlong") {
     //Furlong
-    result = km * 0.0049709695;
+    result = km * 4.9709695379;
   } else if (toUnit == "Nautical Mile") {
     //Nautical Mile
-    result = km * 0.0005399568;
+    result = km * 0.5399568035;
   }
 
   return result;
@@ -140,34 +142,34 @@ var mile_to_ = function mile_to_(mi) {
 
   if (toUnit == "Meter") {
     //Meter
-    result = mi * 30000;
+    result = mi * 1609.344;
   } else if (toUnit == "Kilometer") {
     //Kilometer
-    result = mi * 1000;
+    result = mi * 1.609344;
   } else if (toUnit == "Mile") {
     //Mile
     result = mi;
   } else if (toUnit == "Inch") {
     //Inch
-    result = mi * 39.370079;
+    result = mi * 63360;
   } else if (toUnit == "Foot") {
     //Foot
-    result = mi * 3.28084;
+    result = mi * 5280;
   } else if (toUnit == "Yard") {
     //Yard
-    result = mi * 1.093613;
+    result = mi * 1760;
   } else if (toUnit == "Rod") {
     //Rod
-    result = mi * 0.1988387815;
+    result = mi * 320;
   } else if (toUnit == "Chain") {
     //Chain
-    result = mi * 0.0497096954;
+    result = mi * 80;
   } else if (toUnit == "Furlong") {
     //Furlong
-    result = mi * 0.0049709695;
+    result = mi * 8;
   } else if (toUnit == "Nautical Mile") {
     //Nautical Mile
-    result = mi * 0.0005399568;
+    result = mi * 0.8689762419;
   }
 
   return result;
@@ -180,34 +182,34 @@ var inch_to_ = function inch_to_(inch) {
 
   if (toUnit == "Meter") {
     //Meter
-    result = inch / 39.370079;
+    result = inch * 0.0254;
   } else if (toUnit == "Kilometer") {
     //Kilometer
-    result = inch / 1000;
+    result = inch * 0.000025399986284;
   } else if (toUnit == "Mile") {
     //Mile
-    result = inch * 0.000621;
+    result = inch * 0.000015782828283;
   } else if (toUnit == "Inch") {
     //Inch
     result = inch;
   } else if (toUnit == "Foot") {
     //Foot
-    result = inch * 3.28084;
+    result = inch * 0.083333333333;
   } else if (toUnit == "Yard") {
     //Yard
-    result = inch * 1.093613;
+    result = inch * 0.027777777778;
   } else if (toUnit == "Rod") {
     //Rod
-    result = inch * 0.1988387815;
+    result = inch * 0.0050505051;
   } else if (toUnit == "Chain") {
     //Chain
-    result = inch * 0.0497096954;
+    result = inch * 0.0012626263;
   } else if (toUnit == "Furlong") {
     //Furlong
-    result = inch * 0.0049709695;
+    result = inch * 0.0001262626;
   } else if (toUnit == "Nautical Mile") {
     //Nautical Mile
-    result = inch * 0.0005399568;
+    result = inch * 0.0000137149;
   }
 
   return result;
@@ -220,34 +222,34 @@ var foot_to_ = function foot_to_(ft) {
 
   if (toUnit == "Meter") {
     //Meter
-    result = ft / 3.28084;
+    result = ft * 0.3048;
   } else if (toUnit == "Kilometer") {
     //Kilometer
-    result = ft / 1000;
+    result = ft * 0.00030479999025;
   } else if (toUnit == "Mile") {
     //Mile
-    result = ft * 0.000621;
+    result = ft * 0.00018939393939;
   } else if (toUnit == "Inch") {
     //Inch
-    result = ft * 39.370079;
+    result = ft * 12;
   } else if (toUnit == "Foot") {
     //Foot
     result = ft;
   } else if (toUnit == "Yard") {
     //Yard
-    result = ft * 1.093613;
+    result = ft * 0.33333333333;
   } else if (toUnit == "Rod") {
     //Rod
-    result = ft * 0.1988387815;
+    result = ft * 0.0606060606;
   } else if (toUnit == "Chain") {
     //Chain
-    result = ft * 0.0497096954;
+    result = ft * 0.0151515152;
   } else if (toUnit == "Furlong") {
     //Furlong
-    result = ft * 0.0049709695;
+    result = ft * 0.0015151515;
   } else if (toUnit == "Nautical Mile") {
     //Nautical Mile
-    result = ft * 0.0005399568;
+    result = ft * 0.0001645788;
   }
 
   return result;
@@ -260,34 +262,34 @@ var yard_to_ = function yard_to_(yd) {
 
   if (toUnit == "Meter") {
     //Meter
-    result = yd / 1.093613;
+    result = yd * 0.9144;
   } else if (toUnit == "Kilometer") {
     //Kilometer
-    result = yd / 1000;
+    result = yd * 0.0009144;
   } else if (toUnit == "Mile") {
     //Mile
-    result = yd * 0.000621;
+    result = yd * 0.00056818181818;
   } else if (toUnit == "Inch") {
     //Inch
-    result = yd * 39.370079;
+    result = yd * 36;
   } else if (toUnit == "Foot") {
     //Foot
-    result = yd * 3.28084;
+    result = yd * 3;
   } else if (toUnit == "Yard") {
     //Yard
     result = yd;
   } else if (toUnit == "Rod") {
     //Rod
-    result = yd * 0.1988387815;
+    result = yd * 0.1818181818;
   } else if (toUnit == "Chain") {
     //Chain
-    result = yd * 0.0497096954;
+    result = yd * 0.0454545455;
   } else if (toUnit == "Furlong") {
     //Furlong
-    result = yd * 0.0049709695;
+    result = yd * 0.0045454545;
   } else if (toUnit == "Nautical Mile") {
     //Nautical Mile
-    result = yd * 0.0005399568;
+    result = yd * 0.0004937365;
   }
 
   return result;
@@ -300,34 +302,34 @@ var rod_to_ = function rod_to_(rod) {
 
   if (toUnit == "Meter") {
     //Meter
-    result = rod / 0.1988387815;
+    result = rod * 5.0292;
   } else if (toUnit == "Kilometer") {
     //Kilometer
-    result = rod / 1000;
+    result = rod * 0.0050292;
   } else if (toUnit == "Mile") {
     //Mile
-    result = rod * 0.000621;
+    result = rod * 0.003125;
   } else if (toUnit == "Inch") {
     //Inch
-    result = rod * 39.370079;
+    result = rod * 198;
   } else if (toUnit == "Foot") {
     //Foot
-    result = rod * 3.28084;
+    result = rod * 16.5;
   } else if (toUnit == "Yard") {
     //Yard
-    result = rod * 1.093613;
+    result = rod * 5.5;
   } else if (toUnit == "Rod") {
     //Rod
     result = rod;
   } else if (toUnit == "Chain") {
     //Chain
-    result = rod * 0.0497096954;
+    result = rod * 0.25;
   } else if (toUnit == "Furlong") {
     //Furlong
-    result = rod * 0.0049709695;
+    result = rod * 0.025;
   } else if (toUnit == "Nautical Mile") {
     //Nautical Mile
-    result = rod * 0.0005399568;
+    result = rod * 0.0027155508;
   }
 
   return result;
@@ -340,34 +342,34 @@ var chain_to_ = function chain_to_(ch) {
 
   if (toUnit == "Meter") {
     //Meter
-    result = ch / 0.0497096954;
+    result = ch * 20.1168;
   } else if (toUnit == "Kilometer") {
     //Kilometer
-    result = ch / 1000;
+    result = ch * 0.0201168;
   } else if (toUnit == "Mile") {
     //Mile
-    result = ch * 0.000621;
+    result = ch * 0.0125;
   } else if (toUnit == "Inch") {
     //Inch
-    result = ch * 39.370079;
+    result = ch * 792;
   } else if (toUnit == "Foot") {
     //Foot
-    result = ch * 3.28084;
+    result = ch * 66;
   } else if (toUnit == "Yard") {
     //Yard
-    result = ch * 1.093613;
+    result = ch * 22;
   } else if (toUnit == "Rod") {
     //Rod
-    result = ch * 0.1988387815;
+    result = ch * 4;
   } else if (toUnit == "Chain") {
     //Chain
     result = ch;
   } else if (toUnit == "Furlong") {
     //Furlong
-    result = ch * 0.0049709695;
+    result = ch * 0.1;
   } else if (toUnit == "Nautical Mile") {
     //Nautical Mile
-    result = ch * 0.0005399568;
+    result = ch * 0.010862203;
   }
 
   return result;
@@ -380,34 +382,34 @@ var furlong_to_ = function furlong_to_(fur) {
 
   if (toUnit == "Meter") {
     //Meter
-    result = fur / 0.0049709695;
+    result = fur * 201.168;
   } else if (toUnit == "Kilometer") {
     //Kilometer
-    result = fur / 1000;
+    result = fur * 0.201168;
   } else if (toUnit == "Mile") {
     //Mile
-    result = fur * 0.000621;
+    result = fur * 0.125;
   } else if (toUnit == "Inch") {
     //Inch
-    result = fur * 39.370079;
+    result = fur * 7920;
   } else if (toUnit == "Foot") {
     //Foot
-    result = fur * 3.28084;
+    result = fur * 660;
   } else if (toUnit == "Yard") {
     //Yard
-    result = fur * 1.093613;
+    result = fur * 220;
   } else if (toUnit == "Rod") {
     //Rod
-    result = fur * 0.1988387815;
+    result = fur * 40;
   } else if (toUnit == "Chain") {
     //Chain
-    result = fur * 0.0497096954;
+    result = fur * 10;
   } else if (toUnit == "Furlong") {
     //Furlong
     result = fur;
   } else if (toUnit == "Nautical Mile") {
     //Nautical Mile
-    result = fur * 0.0005399568;
+    result = fur * 0.1086220302;
   }
 
   return result;
@@ -420,31 +422,31 @@ var nauticalMile_to_ = function nauticalMile_to_(nmi) {
 
   if (toUnit == "Meter") {
     //Meter
-    result = nmi / 0.0005399568;
+    result = nmi * 1852;
   } else if (toUnit == "Kilometer") {
     //Kilometer
-    result = nmi / 1000;
+    result = nmi * 1.852;
   } else if (toUnit == "Mile") {
     //Mile
-    result = nmi * 0.000621;
+    result = nmi * 1.150779448;
   } else if (toUnit == "Inch") {
     //Inch
-    result = nmi * 39.370079;
+    result = nmi * 72913.385827;
   } else if (toUnit == "Foot") {
     //Foot
-    result = nmi * 3.28084;
+    result = nmi * 6076.1154856;
   } else if (toUnit == "Yard") {
     //Yard
-    result = nmi * 1.093613;
+    result = nmi * 2025.3718285;
   } else if (toUnit == "Rod") {
     //Rod
-    result = nmi * 0.1988387815;
+    result = nmi * 368.24942336753;
   } else if (toUnit == "Chain") {
     //Chain
-    result = nmi * 0.0497096954;
+    result = nmi * 92.062355842;
   } else if (toUnit == "Furlong") {
     //Furlong
-    result = nmi * 0.0049709695;
+    result = nmi * 9.2062355842;
   } else if (toUnit == "Nautical Mile") {
     //Nautical Mile
     result = nmi;
